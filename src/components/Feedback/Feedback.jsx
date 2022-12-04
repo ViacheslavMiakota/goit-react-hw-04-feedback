@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import {
   FeedbackBox,
   FeedbackTitle,
@@ -24,3 +24,8 @@ const Feedback = ({ onGood, onNeutral, onBad }) => (
 );
 
 export default Feedback;
+Feedback.propTypes = {
+  onGood: PropTypes.func.isRequired,
+  onNeutral: PropTypes.func.isRequired,
+  onBad: PropTypes.func.isRequired,
+};

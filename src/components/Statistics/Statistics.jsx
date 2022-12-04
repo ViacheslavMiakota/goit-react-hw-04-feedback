@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   StatisticsBox,
   StatisticsItem,
@@ -30,3 +31,11 @@ const Statistics = ({
   </StatisticsBox>
 );
 export default Statistics;
+
+Statistics.propTypes = {
+  rezultGood: PropTypes.number.isRequired,
+  rezultNeutral: PropTypes.number.isRequired,
+  rezultBad: PropTypes.number.isRequired,
+  rezultTotal: PropTypes.number.isRequired,
+  rezultPositive: PropTypes.number.isRequired,
+};
