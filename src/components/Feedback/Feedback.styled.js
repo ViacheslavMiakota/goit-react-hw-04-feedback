@@ -1,20 +1,12 @@
 import styled from '@emotion/styled';
 
-export const FeedbackBox = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const FeedbackTitle = styled.p`
-  text-align: center;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-`;
-export const ButtonsList = styled.ul`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  gap: 12px;
+export const Button = styled.button`
+  background-color: hsl(166deg 100% 50%);
+  border-radius: 8px;
+  border-color: rgb(0 162 255);
+  padding: 12px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 `;

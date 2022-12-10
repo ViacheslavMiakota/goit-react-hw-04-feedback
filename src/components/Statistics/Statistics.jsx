@@ -6,24 +6,18 @@ import {
   StatisticsList,
   Notification,
 } from 'components/Statistics/Statistics.styled';
-import { FeedbackTitle } from 'components/Feedback/Feedback.styled';
 
-const Statistics = ({
-  rezultGood,
-  rezultNeutral,
-  rezultBad,
-  rezultTotal,
-  rezultPositive,
-}) => (
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <StatisticsBox>
-    <FeedbackTitle>Statistics</FeedbackTitle>
-    {rezultTotal ? (
+    {total ? (
       <StatisticsList>
-        <StatisticsItem>Good: {rezultGood}</StatisticsItem>
-        <StatisticsItem>Neutral: {rezultNeutral}</StatisticsItem>
-        <StatisticsItem>Bad: {rezultBad}</StatisticsItem>
-        <StatisticsItem>Total: {rezultTotal}</StatisticsItem>
-        <StatisticsItem>Positive feedback: {rezultPositive} %</StatisticsItem>
+        <StatisticsItem>Good: {good}</StatisticsItem>
+        <StatisticsItem>Neutral: {neutral}</StatisticsItem>
+        <StatisticsItem>Bad: {bad}</StatisticsItem>
+        <StatisticsItem>Total: {total}</StatisticsItem>
+        <StatisticsItem>
+          Positive feedback: {positivePercentage} %
+        </StatisticsItem>
       </StatisticsList>
     ) : (
       <Notification>There is no feedback</Notification>
@@ -33,9 +27,9 @@ const Statistics = ({
 export default Statistics;
 
 Statistics.propTypes = {
-  rezultGood: PropTypes.number.isRequired,
-  rezultNeutral: PropTypes.number.isRequired,
-  rezultBad: PropTypes.number.isRequired,
-  rezultTotal: PropTypes.number.isRequired,
-  rezultPositive: PropTypes.number.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
